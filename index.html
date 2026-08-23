@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Circuitos Somadores: Half e Full Adders</title>
+</head>
+<body>
+    <header>
+        <h1>Somadores Digitais</h1>
+        <p>Aprenda os conceitos fundamentais sobre os circuitos aritméticos utilizados em processadores para realizar somas binárias: o Meio Somador e o Somador Completo.</p>
+    </header>
+    <nav>
+        <ul>
+            <li>Lógica Booleana Básica</li>
+            <li class="destaque">Meio Somador (Half Adder)</li>
+            <li>Somador Completo (Full Adder)</li>
+            <li>Ripple Carry Adder</li>
+        </ul>
+    </nav>
+    <main>
+        <h2>O que é um Half Adder?</h2>
+        <p>O Half Adder, ou Meio Somador, é um circuito lógico digital que realiza a adição de dois bits de entrada. Ele produz duas saídas matemáticas: a Soma (Sum) e o Vai-um (Carry). É construído utilizando uma porta XOR e uma porta AND.</p>
+        <p>Apesar de ser extremamente útil, a grande limitação deste circuito é que ele não consegue receber o transporte (Carry-in) de uma soma anterior, sendo útil apenas para o bit menos significativo de uma operação.</p>
+        <img src="img/Meio_-_Somador.JPG" alt="Diagrama de blocos de um Half Adder">
+        <h2>O que é um Full Adder?</h2>
+        <p>O Full Adder resolve o principal problema do seu antecessor adicionando uma terceira entrada: o Carry-in. Com essa terceira porta, é possível encadear vários circuitos em sequência para somar números de 8, 16, 32 ou 64 bits.</p>
+        <img src="img/Somador_Completo.JPG" alt="Diagrama lógico detalhado de um Full Adder">
+        <h3>Componentes da Operação</h3>
+        <ul>
+            <li>Entrada A (Primeiro bit a ser somado)</li>
+            <li>Entrada B (Segundo bit a ser somado)</li>
+            <li>Entrada Cin (Carry-in / Vai-um da casa decimal anterior)</li>
+            <li>Saída Sum (Resultado do bit da soma)</li>
+            <li>Saída Cout (Carry-out / Vai-um para a próxima casa)</li>
+        </ul>
+        
+        <h2>Tabela Verdade</h2>
+        <table> 
+            <caption>Tabela Verdade - Full Adder</caption>
+            <thead>
+                <tr>
+                    <th class="destaque">A</th>
+                    <th class="destaque">B</th>
+                    <th class="destaque">Cin</th>
+                    <th class="destaque">Sum</th>
+                    <th class="destaque">Cout</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Fonte: Wikipedia</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <h2>Vídeo Explicativo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VPw9vPN-3ac" title="Vídeo aula sobre Full e Half Adders" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Envie sua pergunta sobre Eletrônica Digital</legend>
+                <div>
+                    <label for="nome" class="destaque">Nome completo:</label><br>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="email" class="destaque">E-mail para contato:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telefone" class="destaque">Telefone / WhatsApp:</label><br>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                </div>
+                <div>
+                    <label for="idade">Idade:</label><br>
+                    <input type="number" id="idade" name="idade" min="10" max="100">
+                </div>
+                <div>
+                    <label>Qual circuito você tem mais dúvida?</label><br>
+                    <input type="radio" id="duvida-ha" name="tipo-duvida" value="half-adder">
+                    <label for="duvida-ha">Half Adder</label><br>
+                    
+                    <input type="radio" id="duvida-fa" name="tipo-duvida" value="full-adder">
+                    <label for="duvida-fa">Full Adder</label>
+                </div>
+                <div>
+                    <label for="mensagem">Descreva sua dúvida:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="40" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar Dúvida">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>Desenvolvido por Thiago Alves. Trabalho 1 da disciplina de Front End.</p>
+    </footer>
+</body>
+</html>
