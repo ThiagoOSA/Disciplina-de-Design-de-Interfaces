@@ -1,0 +1,92 @@
+:root{
+    --titles-color: rgb(7, 105, 20);
+    --texts: rgb(147, 255, 114);
+    --texts-tertiary: rgb(26, 255, 0);
+}
+
+body{
+    background-color: black;
+}
+
+h1,h2{
+    color: var(--titles-color);
+    text-decoration: underline;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+h1, h2{
+    color: var(--titles-color); 
+    text-align: center;
+    text-decoration: underline;
+}
+
+p, label, ul, ol, table, caption, th, td, legend {
+    color: var(--texts);
+}
+
+.destaque {
+    color: var(--texts-tertiary);
+    font-weight: bold;
+}
+
+
+p::first-letter {
+    font-size: 2em;
+}
+
+footer p {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid var(--titles-color);
+    padding-top: 10px;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid var(--titles-color);
+    padding: 8px;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+input,textarea,fieldset{
+    background-color: black;
+    color: var(--texts);
+    border-color: var(--titles-color);
+}
